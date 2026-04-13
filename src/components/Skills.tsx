@@ -1,4 +1,5 @@
 import { useScrollRevealAll } from '../hooks/useScrollReveal';
+import { motion } from 'framer-motion';
 
 export default function Skills() {
   const ref = useScrollRevealAll<HTMLElement>(0.1);
@@ -15,8 +16,8 @@ export default function Skills() {
 
         {/* Bento Grid for Skills */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Tech/Languages */}
-          <div className="md:col-span-2 bg-surface-container-lowest p-6 sm:p-8 md:p-10 rounded-lg group hover:shadow-[0_20px_40px_rgba(25,28,27,0.04)] transition-all duration-500 cubic-bezier-transition" data-reveal="fade-in" style={{ transitionDelay: '100ms' }}>
+           {/* Tech/Languages */}
+           <div className="md:col-span-2 bg-surface-container-lowest p-6 sm:p-8 md:p-10 rounded-lg group hover:shadow-[0_20px_40px_rgba(25,28,27,0.04)] transition-all duration-500 cubic-bezier-transition" data-reveal="fade-in" style={{ transitionDelay: '100ms' }}>
             <div className="flex items-center gap-4 mb-8">
               <span className="material-symbols-outlined text-primary text-3xl">translate</span>
               <h3 className="text-2xl font-headline font-bold">Năng lực ngoại ngữ</h3>
@@ -25,19 +26,37 @@ export default function Skills() {
               <div className="space-y-2">
                 <div className="text-on-surface font-bold font-headline">IELTS Overall (5.5)</div>
                 <div className="h-1 bg-surface-container-highest rounded-full overflow-hidden">
-                  <div className="h-full bg-primary w-[70%]" />
+                  <motion.div 
+                    className="h-full bg-primary" 
+                    initial={{ width: 0 }}
+                    whileInView={{ width: '70%' }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                  />
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="text-on-surface font-bold font-headline">Khả năng Reading</div>
                 <div className="h-1 bg-surface-container-highest rounded-full overflow-hidden">
-                  <div className="h-full bg-primary w-[80%]" />
+                  <motion.div 
+                    className="h-full bg-primary" 
+                    initial={{ width: 0 }}
+                    whileInView={{ width: '80%' }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+                  />
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="text-on-surface font-bold font-headline">Khả năng Writing</div>
                 <div className="h-1 bg-surface-container-highest rounded-full overflow-hidden">
-                  <div className="h-full bg-primary w-[60%]" />
+                  <motion.div 
+                    className="h-full bg-primary" 
+                    initial={{ width: 0 }}
+                    whileInView={{ width: '60%' }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
+                  />
                 </div>
               </div>
             </div>
