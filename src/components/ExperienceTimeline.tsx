@@ -89,7 +89,7 @@ export default function ExperienceTimeline() {
                   Ngành Kinh doanh Quốc tế, tập trung phát triển kỹ năng tư duy phản biện, thương mại toàn cầu, tài chính doanh nghiệp và quản trị chiến lược.
                 </p>
 
-                <div className="mt-24 md:mt-32 pt-12 border-t border-outline-variant/30 flex justify-end items-center gap-6 md:gap-10 w-full pr-16 md:pr-32 lg:pr-48">
+                <div className="mt-24 md:mt-32 pt-12 border-t border-outline-variant/30 flex justify-center items-center gap-6 md:gap-10 w-full">
                   <div className="text-[10px] md:text-sm font-label font-bold text-primary uppercase tracking-widest text-right">
                     Click thả hồ sơ &rarr;<br/><span className="text-on-surface-variant font-normal normal-case">Thành tích học viên</span>
                   </div>
