@@ -14,12 +14,12 @@ export default function ExperienceTimeline() {
           </div>
           <div className="md:w-2/3 relative mt-8 md:mt-0">
             {/* Vertical Line */}
-            <div className="absolute left-[7px] top-2 bottom-2 w-[1px] bg-outline-variant opacity-30" />
+            <div className="absolute left-[11px] top-2 bottom-2 w-[1px] bg-outline-variant opacity-30" />
             
             <div className="space-y-16">
               {/* Experience Item 1 */}
-              <div className="relative pl-10">
-                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
+              <div className="relative pl-12">
+                <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
                   <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1s_ease-out_infinite] opacity-75"></div>
                 </div>
                 <span className="text-sm font-label uppercase tracking-widest text-on-surface-variant">
@@ -35,8 +35,8 @@ export default function ExperienceTimeline() {
               </div>
 
               {/* Experience Item 2 */}
-              <div className="relative pl-10">
-                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
+              <div className="relative pl-12">
+                <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
                   <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1.2s_ease-out_infinite] opacity-75" style={{animationDelay: '100ms'}}></div>
                 </div>
                 <span className="text-sm font-label uppercase tracking-widest text-on-surface-variant">
@@ -52,8 +52,8 @@ export default function ExperienceTimeline() {
               </div>
               
               {/* Experience Item 3 */}
-              <div className="relative pl-10">
-                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
+              <div className="relative pl-12">
+                <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
                   <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1.2s_ease-out_infinite] opacity-75" style={{animationDelay: '300ms'}}></div>
                 </div>
                 <span className="text-sm font-label uppercase tracking-widest text-on-surface-variant">
@@ -69,8 +69,8 @@ export default function ExperienceTimeline() {
               </div>
 
               {/* Education Item 1 */}
-              <div className="relative pl-10">
-                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
+              <div className="relative pl-12">
+                <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
                   <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1.2s_ease-out_infinite] opacity-75" style={{animationDelay: '500ms'}}></div>
                 </div>
                 <span className="text-sm font-label uppercase tracking-widest text-on-surface-variant">
