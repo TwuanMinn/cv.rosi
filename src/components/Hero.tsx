@@ -1,37 +1,37 @@
 export default function Hero() {
   return (
-    <section className="min-h-[100svh] md:min-h-[921px] flex items-center px-6 md:px-8 max-w-screen-2xl mx-auto relative overflow-hidden pt-32 md:pt-0 pb-20 md:pb-0">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center w-full">
-        <div className="md:col-span-7 z-10">
-          <span className="text-sm uppercase tracking-widest text-on-surface-variant font-medium font-label mb-4 block">
+    <section className="min-h-[100svh] md:min-h-[921px] flex items-center px-4 md:px-8 max-w-screen-2xl mx-auto relative overflow-hidden pt-28 md:pt-0 pb-16 md:pb-0">
+      <div className="grid grid-cols-12 gap-4 md:gap-12 items-center w-full">
+        <div className="col-span-7 z-10">
+          <span className="text-[10px] md:text-sm uppercase tracking-widest text-on-surface-variant font-medium font-label mb-2 md:mb-4 block">
             Kinh doanh Quốc tế & Giảng dạy
           </span>
-          <h1 className="text-6xl md:text-7xl lg:text-9xl font-headline font-extrabold tracking-tighter leading-none text-primary mb-8 break-words select-none">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-headline font-extrabold tracking-tighter leading-none text-primary mb-4 md:mb-8 break-words select-none">
             Thái <br />
             Duyên.
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-on-surface-variant font-body leading-relaxed max-w-2xl mb-12">
-            Sinh viên Kinh doanh Quốc tế tại UFM University — với hành trình giảng dạy hơn 4 năm và niềm đam mê phát triển bản thân không ngừng. Kết nối tri thức và giá trị trong từng dự án nghiên cứu và lớp học.
+          <p className="text-sm md:text-xl lg:text-2xl text-on-surface-variant font-body leading-relaxed max-w-2xl mb-6 md:mb-12">
+            Sinh viên KD Quốc tế tại UFM University — giảng dạy hơn 4 năm.
           </p>
-          <div className="flex flex-col gap-4 mb-10 w-full">
+          <div className="flex flex-col gap-2 md:gap-4 mb-6 md:mb-10 w-full">
             {[
               { icon: 'mail', text: 'thaiduyen809@gmail.com', href: 'mailto:thaiduyen809@gmail.com' },
               { icon: 'call', text: '0707 272 484', href: 'tel:0707272484' },
               { icon: 'language', text: 'thaiduyen809@fb.com', href: 'https://fb.com/thaiduyen809' },
-              { icon: 'location_on', text: 'Quận 7, Tp. Hồ Chí Minh' },
+              { icon: 'location_on', text: 'Quận 7, Tp. HCM' },
             ].map((contact, i) => (
-              <div key={i} className="flex items-center gap-4">
-                <div className="w-8 h-8 rounded shrink-0 bg-[#be312e] text-white flex items-center justify-center shadow-sm">
-                  <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+              <div key={i} className="flex items-center gap-2 md:gap-4">
+                <div className="w-6 h-6 md:w-8 md:h-8 rounded shrink-0 bg-[#be312e] text-white flex items-center justify-center shadow-sm">
+                  <span className="material-symbols-outlined text-[14px] md:text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                     {contact.icon}
                   </span>
                 </div>
                 {contact.href ? (
-                  <a href={contact.href} className="text-[#002118] font-body text-base md:text-lg hover:text-[#00513f] transition-colors no-underline break-words md:break-normal max-w-[85%]">
+                  <a href={contact.href} className="text-[#002118] font-body text-xs sm:text-sm md:text-lg hover:text-[#00513f] transition-colors no-underline line-clamp-1">
                     {contact.text}
                   </a>
                 ) : (
-                  <span className="text-[#002118] font-body text-base md:text-lg break-words md:break-normal max-w-[85%]">
+                  <span className="text-[#002118] font-body text-xs sm:text-sm md:text-lg line-clamp-1">
                     {contact.text}
                   </span>
                 )}
@@ -39,30 +39,24 @@ export default function Hero() {
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col gap-3">
             <a
               href="#experience"
-              className="bg-primary text-on-primary px-6 md:px-8 py-4 rounded-lg font-bold tracking-tight flex items-center justify-center gap-2 group transition-all duration-300 cubic-bezier-transition no-underline w-full sm:w-auto text-center"
+              className="bg-primary text-on-primary px-3 md:px-8 py-2 md:py-4 rounded-lg font-bold tracking-tight flex items-center justify-center gap-1 md:gap-2 group transition-all duration-300 cubic-bezier-transition no-underline w-full text-center text-xs md:text-base whitespace-nowrap"
             >
               Xem quá trình làm việc
-              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
-                arrow_forward
-              </span>
             </a>
             <a
               href="/cv.pdf"
               download
-              className="border-2 border-primary text-primary px-6 md:px-8 py-4 rounded-lg font-bold tracking-tight flex items-center justify-center gap-2 group transition-all duration-300 hover:bg-primary hover:text-on-primary cubic-bezier-transition no-underline w-full sm:w-auto text-center"
+              className="border-[1.5px] md:border-2 border-primary text-primary px-3 md:px-8 py-2 md:py-4 rounded-lg font-bold tracking-tight flex items-center justify-center gap-1 md:gap-2 group transition-all duration-300 hover:bg-primary hover:text-on-primary cubic-bezier-transition no-underline w-full text-center text-xs md:text-base whitespace-nowrap"
             >
               Tải CV
-              <span className="material-symbols-outlined group-hover:-translate-y-1 transition-transform">
-                download
-              </span>
             </a>
           </div>
         </div>
-        <div className="md:col-span-5 relative">
-          <div className="aspect-[4/5] bg-surface-container-high rounded-lg overflow-hidden transition-all duration-700 cubic-bezier-transition shadow-2xl">
+        <div className="col-span-5 relative mt-8 md:mt-0 self-start md:self-center">
+          <div className="aspect-[3/4] md:aspect-[4/5] bg-surface-container-high rounded-xl md:rounded-lg overflow-hidden transition-all duration-700 cubic-bezier-transition shadow-2xl">
             <img
               alt="Thái Duyên"
               className="w-full h-full object-cover object-top"
@@ -70,7 +64,7 @@ export default function Hero() {
             />
           </div>
           {/* Decorative element */}
-          <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-primary-fixed -z-10 rounded-full opacity-50 blur-3xl" />
+          <div className="absolute -bottom-4 -left-4 md:-bottom-10 md:-left-10 w-24 h-24 md:w-48 md:h-48 bg-primary-fixed -z-10 rounded-full opacity-50 blur-2xl md:blur-3xl" />
         </div>
       </div>
     </section>
