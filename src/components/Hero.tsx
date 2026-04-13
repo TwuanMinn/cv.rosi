@@ -52,7 +52,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="lg:col-span-5 relative">
-          <div className="aspect-[4/5] bg-surface-container-high rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 cubic-bezier-transition shadow-2xl">
+          <div className="aspect-[4/5] bg-surface-container-high rounded-lg overflow-hidden transition-all duration-700 cubic-bezier-transition shadow-2xl">
             <img
               alt="Thái Duyên"
               className="w-full h-full object-cover object-top"
