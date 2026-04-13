@@ -48,14 +48,14 @@ export default function ExperienceTimeline() {
           </div>
           <div className="md:w-2/3 relative mt-8 md:mt-0">
             {/* Vertical Line */}
-            <div className="absolute left-4 md:left-[1.35rem] top-2 bottom-0 w-px bg-outline-variant"></div>
+            <div className="absolute left-[17px] md:left-[21px] top-4 bottom-2 w-0.5 bg-outline-variant/60 rounded-full"></div>
 
             <div className="space-y-12 md:space-y-16">
               {/* Item 1 */}
               <div className="relative pl-12 md:pl-16" data-reveal="up">
                 {/* Timeline Dot */}
-                <span className="absolute left-[11px] md:left-[15px] top-1.5 w-3.5 h-3.5 bg-primary rounded-full ring-4 ring-surface-container-low z-10">
-                  <span className="absolute inset-0 bg-primary rounded-full animate-ping opacity-75"></span>
+                <span className="absolute left-[9px] md:left-[13px] top-1.5 w-[18px] h-[18px] bg-primary rounded-full ring-4 ring-surface-container-low z-10 flex items-center justify-center">
+                  <span className="absolute inset-0 bg-primary rounded-full animate-ping opacity-60"></span>
                 </span>
                 
                 <h3 className="text-xl md:text-2xl font-headline font-bold text-primary mb-1">
@@ -77,10 +77,10 @@ export default function ExperienceTimeline() {
               </div>
 
               {/* Experience Item 2 */}
-              <div className="relative pl-12" data-reveal="fade-in" style={{ transitionDelay: '200ms' }}>
-                <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
-                  <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1.2s_ease-out_infinite] opacity-75" style={{animationDelay: '100ms'}}></div>
-                </div>
+              <div className="relative pl-12 md:pl-16" data-reveal="fade-in" style={{ transitionDelay: '200ms' }}>
+                <span className="absolute left-[9px] md:left-[13px] top-1.5 w-[18px] h-[18px] bg-primary rounded-full ring-4 ring-surface-container-low z-10 flex items-center justify-center">
+                  <span className="absolute inset-0 bg-primary rounded-full animate-ping opacity-50" style={{animationDelay: '100ms'}}></span>
+                </span>
                 <span className="text-sm font-label uppercase tracking-widest text-on-surface-variant">
                   2024 — 2025
                 </span>
@@ -94,10 +94,10 @@ export default function ExperienceTimeline() {
               </div>
               
               {/* Experience Item 3 */}
-              <div className="relative pl-12" data-reveal="fade-in" style={{ transitionDelay: '300ms' }}>
-                <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
-                  <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1.2s_ease-out_infinite] opacity-75" style={{animationDelay: '300ms'}}></div>
-                </div>
+              <div className="relative pl-12 md:pl-16" data-reveal="fade-in" style={{ transitionDelay: '300ms' }}>
+                <span className="absolute left-[9px] md:left-[13px] top-1.5 w-[18px] h-[18px] bg-primary rounded-full ring-4 ring-surface-container-low z-10 flex items-center justify-center">
+                  <span className="absolute inset-0 bg-primary rounded-full animate-ping opacity-50" style={{animationDelay: '300ms'}}></span>
+                </span>
                 <span className="text-sm font-label uppercase tracking-widest text-on-surface-variant">
                   2021 — 2024
                 </span>
@@ -111,10 +111,10 @@ export default function ExperienceTimeline() {
               </div>
 
               {/* Education Item 1 */}
-              <div className="relative pl-12" data-reveal="fade-in" style={{ transitionDelay: '400ms' }}>
-                <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
-                  <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1.2s_ease-out_infinite] opacity-75" style={{animationDelay: '500ms'}}></div>
-                </div>
+              <div className="relative pl-12 md:pl-16" data-reveal="fade-in" style={{ transitionDelay: '400ms' }}>
+                <span className="absolute left-[9px] md:left-[13px] top-1.5 w-[18px] h-[18px] bg-primary rounded-full ring-4 ring-surface-container-low z-10 flex items-center justify-center">
+                  <span className="absolute inset-0 bg-primary rounded-full animate-ping opacity-50" style={{animationDelay: '500ms'}}></span>
+                </span>
                 <span className="text-sm font-label uppercase tracking-widest text-on-surface-variant">
                   2021 — 2024
                 </span>
