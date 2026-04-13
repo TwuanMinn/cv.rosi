@@ -15,7 +15,7 @@ export default function ExperienceTimeline() {
                 Học vấn & Kinh nghiệm
               </h2>
               <TrueFocus 
-                sentence="Hơn 4 năm,chuyên ngành"
+                sentence="Hơn 4 năm,kinh nghiệm"
                 separator=","
                 borderColor="#00513f"
                 glowColor="rgba(0, 81, 63, 0.4)"
