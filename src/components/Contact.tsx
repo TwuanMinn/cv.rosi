@@ -1,4 +1,5 @@
 import { useScrollRevealAll } from '../hooks/useScrollReveal';
+import MagneticButton from './MagneticButton';
 
 export default function Contact() {
   const ref = useScrollRevealAll<HTMLElement>(0.1);
@@ -10,18 +11,20 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-headline font-extrabold text-on-primary-fixed tracking-tighter leading-none mb-8">
             Sẵn sàng để hợp tác?
           </h2>
-          <p className="text-lg md:text-xl text-on-primary-fixed-variant mb-12 font-body">
-            Liên hệ với tôi để trao đổi cụ thể về những dự án và mục tiêu kinh doanh sắp tới.
+          <p className="text-lg md:text-2xl text-on-primary-fixed opacity-90 font-body leading-relaxed mb-12">
+            Luôn tìm kiếm cơ hội tham gia các dự án giáo dục và phát triển thương mại, quản lý đào tạo nhân sự.
           </p>
-          <a
-            className="inline-flex items-center gap-4 text-2xl md:text-3xl font-headline font-bold text-primary group transition-all duration-300 no-underline"
-            href="mailto:thaiduyen809@gmail.com"
-          >
-            Bắt đầu thảo luận
-            <span className="material-symbols-outlined text-3xl md:text-4xl group-hover:translate-x-4 transition-transform duration-300">
-              east
-            </span>
-          </a>
+          <MagneticButton>
+            <a
+              href="mailto:thaiduyen809@gmail.com"
+              className="inline-flex items-center gap-3 bg-on-primary-fixed text-primary-fixed px-8 py-4 lg:py-5 lg:px-10 rounded-xl font-bold tracking-tight group hover:scale-105 transition-all duration-300 cubic-bezier-transition no-underline text-lg"
+            >
+              Liên hệ ngay
+              <span className="material-symbols-outlined text-2xl group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
+                arrow_outward
+              </span>
+            </a>
+          </MagneticButton>
         </div>
         {/* Decorative background elements */}
         <div className="absolute right-[-10%] top-[-10%] w-[500px] h-[500px] bg-primary opacity-10 rounded-full blur-3xl" />

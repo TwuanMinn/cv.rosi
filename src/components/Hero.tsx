@@ -1,7 +1,21 @@
+import { useEffect, useRef } from 'react';
 import { useScrollRevealAll } from '../hooks/useScrollReveal';
+import MagneticButton from './MagneticButton';
 
 export default function Hero() {
   const ref = useScrollRevealAll<HTMLElement>(0.1);
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!imageRef.current) return;
+      const scrollY = window.scrollY;
+      imageRef.current.style.transform = `translateY(${scrollY * 0.15}px) scale(1.05)`;
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <section ref={ref} className="min-h-[100svh] md:min-h-[921px] flex flex-col justify-center px-4 md:px-8 max-w-[100vw] mx-auto relative overflow-hidden pt-28 md:pt-0 pb-16 md:pb-0">
@@ -10,9 +24,13 @@ export default function Hero() {
           <span className="text-[10px] md:text-sm uppercase tracking-widest text-on-surface-variant font-medium font-label mb-2 md:mb-4 block">
             Kinh doanh Quốc tế & Giảng dạy
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-headline font-extrabold tracking-tighter leading-none text-primary mb-4 md:mb-8 break-words select-none">
-            Thái <br />
-            Duyên.
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-headline font-extrabold tracking-tighter leading-none text-primary mb-4 md:mb-8 break-words select-none flex flex-col">
+            <span className="overflow-hidden block py-1 md:py-2">
+              <span className="block animate-[slideUp_1.2s_cubic-bezier(0.22,1,0.36,1)_forwards] translate-y-full opacity-0" style={{ animationDelay: '0.1s' }}>Thái</span>
+            </span>
+            <span className="overflow-hidden block py-1 md:py-2">
+              <span className="block animate-[slideUp_1.2s_cubic-bezier(0.22,1,0.36,1)_forwards] translate-y-full opacity-0" style={{ animationDelay: '0.3s' }}>Duyên.</span>
+            </span>
           </h1>
           <p className="text-sm md:text-xl lg:text-2xl text-on-surface-variant font-body leading-relaxed max-w-2xl mb-6 md:mb-12">
             Sinh viên KD Quốc tế tại UFM University — giảng dạy hơn 4 năm.
@@ -44,27 +62,32 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-col gap-3">
-            <a
-              href="#experience"
-              className="bg-primary text-on-primary px-3 md:px-8 py-2 md:py-4 rounded-lg font-bold tracking-tight flex items-center justify-center gap-1 md:gap-2 group transition-all duration-300 cubic-bezier-transition no-underline w-full text-center text-xs md:text-base whitespace-nowrap"
-            >
-              Xem quá trình làm việc
-            </a>
-            <a
-              href="/cv.pdf"
-              download
-              className="border-[1.5px] md:border-2 border-primary text-primary px-3 md:px-8 py-2 md:py-4 rounded-lg font-bold tracking-tight flex items-center justify-center gap-1 md:gap-2 group transition-all duration-300 hover:bg-primary hover:text-on-primary cubic-bezier-transition no-underline w-full text-center text-xs md:text-base whitespace-nowrap"
-            >
-              Tải CV
-            </a>
+            <MagneticButton className="w-full">
+              <a
+                href="#experience"
+                className="bg-primary text-on-primary px-3 md:px-8 py-2 md:py-4 rounded-lg font-bold tracking-tight flex items-center justify-center gap-1 md:gap-2 group transition-all duration-300 cubic-bezier-transition no-underline w-full text-center text-xs md:text-base whitespace-nowrap"
+              >
+                Xem quá trình làm việc
+              </a>
+            </MagneticButton>
+            <MagneticButton className="w-full">
+              <a
+                href="/cv.pdf"
+                download
+                className="border-[1.5px] md:border-2 border-primary text-primary px-3 md:px-8 py-2 md:py-4 rounded-lg font-bold tracking-tight flex items-center justify-center gap-1 md:gap-2 group transition-all duration-300 hover:bg-primary hover:text-on-primary cubic-bezier-transition no-underline w-full text-center text-xs md:text-base whitespace-nowrap"
+              >
+                Tải CV
+              </a>
+            </MagneticButton>
           </div>
         </div>
 
         <div className="col-span-5 relative mt-8 md:mt-0 self-start md:self-center" data-reveal="right" style={{ transitionDelay: '200ms' }}>
           <div className="aspect-[3/4] md:aspect-[4/5] bg-surface-container-high rounded-xl md:rounded-lg overflow-hidden transition-all duration-700 cubic-bezier-transition shadow-2xl">
             <img
+              ref={imageRef}
               alt="Thái Duyên"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-top will-change-transform"
               src="/profile.png"
             />
           </div>
