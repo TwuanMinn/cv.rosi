@@ -105,7 +105,7 @@ export default function ExperienceTimeline() {
                   Ngành Kinh doanh Quốc tế, tập trung phát triển kỹ năng tư duy phản biện, thương mại toàn cầu, tài chính doanh nghiệp và quản trị chiến lược.
                 </p>
 
-                <div className="mt-12 mb-4 flex items-center gap-6 md:gap-10">
+                <div className="mt-24 md:mt-32 pt-12 border-t border-outline-variant/30 flex items-center gap-6 md:gap-10">
                   <Folder 
                     color="#00513f" 
                     size={1.6}
