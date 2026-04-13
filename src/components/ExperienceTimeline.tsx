@@ -1,4 +1,5 @@
 import { useScrollRevealAll } from '../hooks/useScrollReveal';
+import TrueFocus from './ui/TrueFocus';
 
 export default function ExperienceTimeline() {
   const ref = useScrollRevealAll<HTMLElement>(0.1);
@@ -8,13 +9,20 @@ export default function ExperienceTimeline() {
       <div className="max-w-screen-xl mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16">
           <div className="md:w-1/3" data-reveal="left">
-            <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary tracking-tight sticky top-24 lg:top-32">
-              Học vấn & <br className="hidden md:block" />
-              Kinh nghiệm.
-            </h2>
-            <p className="mt-4 md:mt-6 text-base md:text-lg text-on-surface-variant font-body leading-relaxed">
-              Hơn 4 năm hành trình giảng dạy thực tế cùng kiến thức chuyên ngành tại môi trường giáo dục đại học.
-            </p>
+            <div className="sticky top-24 lg:top-32">
+              <h2 className="text-2xl md:text-3xl font-headline font-bold text-on-surface-variant tracking-tight uppercase mb-4 opacity-50">
+                Học vấn & Kinh nghiệm
+              </h2>
+              <TrueFocus 
+                sentence="Hơn 4 năm,chuyên ngành"
+                separator=","
+                borderColor="#00513f"
+                glowColor="rgba(0, 81, 63, 0.4)"
+              />
+              <p className="mt-6 md:mt-8 text-base md:text-lg text-on-surface-variant font-body leading-relaxed">
+                Hành trình giảng dạy thực tế song song cùng kiến thức đại học tại UFM University — không ngừng cập nhật để trở thành một nhà giáo dục ưu tú.
+              </p>
+            </div>
           </div>
           <div className="md:w-2/3 relative mt-8 md:mt-0">
             {/* Vertical Line */}
