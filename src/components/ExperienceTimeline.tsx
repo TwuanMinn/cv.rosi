@@ -23,27 +23,6 @@ export default function ExperienceTimeline() {
               <p className="mt-6 md:mt-8 text-base md:text-lg text-on-surface-variant font-body leading-relaxed">
                 Hành trình giảng dạy thực tế song song cùng kiến thức đại học tại UFM University — không ngừng cập nhật để trở thành một nhà giáo dục ưu tú.
               </p>
-              
-              <div className="mt-12 md:mt-16 mb-4 flex items-center gap-6 md:gap-10">
-                <Folder 
-                  color="#00513f" 
-                  size={1.6}
-                  items={[
-                    <div className="px-2 pt-2 text-[10px] leading-tight text-[#002118] font-body text-center h-full flex items-center justify-center border-[0.5px] border-primary/20 rounded-[10px] bg-gradient-to-br from-white to-[#f0fdf5]">
-                      <span className="font-bold text-primary block mb-1">95% học sinh</span><br/>tiến bộ<br/>vượt bậc
-                    </div>,
-                    <div className="px-2 pt-2 text-[10px] leading-tight text-[#002118] font-body text-center h-full flex items-center justify-center border-[0.5px] border-primary/20 rounded-[10px] bg-gradient-to-br from-white to-[#f0fdf5]">
-                      <span className="font-bold text-primary block mb-1">Đỗ trường</span><br/>chuyên<br/>top đầu
-                    </div>,
-                    <div className="px-2 pt-2 text-[10px] leading-tight text-[#002118] font-body text-center h-full flex items-center justify-center border-[0.5px] border-primary/20 rounded-[10px] bg-gradient-to-br from-white to-[#f0fdf5]">
-                      <span className="font-bold text-primary block mb-1">Làm chủ</span><br/>tư duy<br/>logic
-                    </div>
-                  ]}
-                />
-                <div className="text-[10px] md:text-sm font-label font-bold text-primary uppercase tracking-widest">
-                  &larr; Click thả hồ sơ <br/><span className="text-on-surface-variant font-normal normal-case">Thành tích học viên</span>
-                </div>
-              </div>
             </div>
           </div>
           <div className="md:w-2/3 relative mt-8 md:mt-0">
@@ -125,6 +104,27 @@ export default function ExperienceTimeline() {
                 <p className="mt-4 text-on-surface-variant font-body leading-relaxed">
                   Ngành Kinh doanh Quốc tế, tập trung phát triển kỹ năng tư duy phản biện, thương mại toàn cầu, tài chính doanh nghiệp và quản trị chiến lược.
                 </p>
+
+                <div className="mt-12 mb-4 flex items-center gap-6 md:gap-10">
+                  <Folder 
+                    color="#00513f" 
+                    size={1.6}
+                    items={[
+                      <div className="px-2 pt-2 text-[10px] leading-tight text-[#002118] font-body text-center h-full flex items-center justify-center border-[0.5px] border-primary/20 rounded-[10px] bg-gradient-to-br from-white to-[#f0fdf5]">
+                        <span className="font-bold text-primary block mb-1">95% học sinh</span><br/>tiến bộ<br/>vượt bậc
+                      </div>,
+                      <div className="px-2 pt-2 text-[10px] leading-tight text-[#002118] font-body text-center h-full flex items-center justify-center border-[0.5px] border-primary/20 rounded-[10px] bg-gradient-to-br from-white to-[#f0fdf5]">
+                        <span className="font-bold text-primary block mb-1">Đỗ trường</span><br/>chuyên<br/>top đầu
+                      </div>,
+                      <div className="px-2 pt-2 text-[10px] leading-tight text-[#002118] font-body text-center h-full flex items-center justify-center border-[0.5px] border-primary/20 rounded-[10px] bg-gradient-to-br from-white to-[#f0fdf5]">
+                        <span className="font-bold text-primary block mb-1">Làm chủ</span><br/>tư duy<br/>logic
+                      </div>
+                    ]}
+                  />
+                  <div className="text-[10px] md:text-sm font-label font-bold text-primary uppercase tracking-widest">
+                    &larr; Click thả hồ sơ <br/><span className="text-on-surface-variant font-normal normal-case">Thành tích học viên</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
