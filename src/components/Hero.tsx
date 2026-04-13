@@ -24,14 +24,12 @@ export default function Hero() {
           <span className="text-[10px] md:text-sm uppercase tracking-widest text-on-surface-variant font-medium font-label mb-2 md:mb-4 block">
             Kinh doanh Quốc tế & Giảng dạy
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-headline font-extrabold tracking-tighter leading-none text-primary mb-4 md:mb-8 break-words select-none flex flex-col">
-            <span className="overflow-hidden block py-1 md:py-2">
-              <span className="block translate-y-full opacity-0 animate-slide-up" style={{ animationDelay: '300ms' }}>Thái</span>
-            </span>
-            <span className="overflow-hidden block py-1 md:py-2">
-              <span className="block translate-y-full opacity-0 animate-slide-up" style={{ animationDelay: '500ms' }}>Duyên.</span>
-            </span>
-          </h1>
+          <div data-reveal="left" style={{ transitionDelay: '100ms' }}>
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-headline font-extrabold tracking-tighter leading-none text-primary mb-4 md:mb-8 break-words select-none">
+              Thái <br />
+              Duyên.
+            </h1>
+          </div>
           <p className="text-sm md:text-xl lg:text-2xl text-on-surface-variant font-body leading-relaxed max-w-2xl mb-6 md:mb-12">
             Sinh viên KD Quốc tế tại UFM University — giảng dạy hơn 4 năm.
           </p>
