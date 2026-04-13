@@ -90,9 +90,6 @@ export default function ExperienceTimeline() {
                 </p>
 
                 <div className="mt-24 md:mt-32 pt-12 border-t border-outline-variant/30 flex justify-start items-center gap-6 md:gap-10 w-full pl-0 md:pl-12 lg:pl-24">
-                  <div className="text-[10px] md:text-sm font-label font-bold text-primary uppercase tracking-widest text-right">
-                    Click thả hồ sơ &rarr;<br/><span className="text-on-surface-variant font-normal normal-case">Thành tích học viên</span>
-                  </div>
                   <Folder 
                     color="#00513f" 
                     size={1.6}
@@ -108,6 +105,9 @@ export default function ExperienceTimeline() {
                       </div>
                     ]}
                   />
+                  <div className="text-[10px] md:text-sm font-label font-bold text-primary uppercase tracking-widest text-left">
+                    &larr; Click thả hồ sơ<br/><span className="text-on-surface-variant font-normal normal-case">Thành tích học viên</span>
+                  </div>
                 </div>
               </div>
             </div>
