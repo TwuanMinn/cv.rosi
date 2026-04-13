@@ -4,9 +4,9 @@ export default function Hero() {
   const ref = useScrollRevealAll<HTMLElement>(0.1);
 
   return (
-    <section ref={ref} className="min-h-[100svh] md:min-h-[921px] flex items-center px-4 md:px-8 max-w-screen-2xl mx-auto relative overflow-hidden pt-28 md:pt-0 pb-16 md:pb-0">
-      <div className="grid grid-cols-12 gap-4 md:gap-12 items-center w-full">
-        <div className="col-span-7 z-10" data-reveal="left">
+    <section ref={ref} className="min-h-[100svh] md:min-h-[921px] flex flex-col justify-center px-4 md:px-8 max-w-[100vw] mx-auto relative overflow-hidden pt-28 md:pt-0 pb-16 md:pb-0">
+      <div className="grid grid-cols-12 gap-4 md:gap-12 items-center w-full max-w-screen-2xl mx-auto">
+        <div className="col-span-7 z-10">
           <span className="text-[10px] md:text-sm uppercase tracking-widest text-on-surface-variant font-medium font-label mb-2 md:mb-4 block">
             Kinh doanh Quốc tế & Giảng dạy
           </span>
@@ -58,32 +58,8 @@ export default function Hero() {
               Tải CV
             </a>
           </div>
-
-          <div className="w-full overflow-hidden mt-6 md:mt-10 pt-4 md:pt-6 border-t border-outline-variant/30 mask-image-fade" data-reveal="fade-in" style={{ transitionDelay: '300ms' }}>
-            <div className="animate-marquee items-center select-none text-outline-variant">
-              {[...Array(2)].map((_, groupIndex) => (
-                <div key={groupIndex} className="flex shrink-0 items-center">
-                  {[
-                    'Giảng dạy Trung học',
-                    'Kinh doanh Quốc tế',
-                    'Thuyết trình 100+ người',
-                    'MOS Specialist 2019',
-                    'Quản trị chiến lược'
-                  ].map((text, i) => (
-                    <div key={i} className="flex items-center shrink-0">
-                      <span className="text-[#00513f] font-headline font-semibold uppercase tracking-[0.15em] text-[10px] md:text-xs">
-                        {text}
-                      </span>
-                      <span className="mx-4 md:mx-6 text-[10px] md:text-xs opacity-50">
-                        ✦
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
+
         <div className="col-span-5 relative mt-8 md:mt-0 self-start md:self-center" data-reveal="right" style={{ transitionDelay: '200ms' }}>
           <div className="aspect-[3/4] md:aspect-[4/5] bg-surface-container-high rounded-xl md:rounded-lg overflow-hidden transition-all duration-700 cubic-bezier-transition shadow-2xl">
             <img
@@ -94,6 +70,31 @@ export default function Hero() {
           </div>
           {/* Decorative element */}
           <div className="absolute -bottom-4 -left-4 md:-bottom-10 md:-left-10 w-24 h-24 md:w-48 md:h-48 bg-primary-fixed -z-10 rounded-full opacity-50 blur-2xl md:blur-3xl" />
+        </div>
+      </div>
+
+      <div className="w-screen relative left-1/2 -translate-x-1/2 overflow-hidden mt-12 md:mt-20 py-4 md:py-6 border-y border-outline-variant/30 mask-image-fade" data-reveal="fade-in" style={{ transitionDelay: '300ms' }}>
+        <div className="animate-marquee items-center select-none text-outline-variant">
+          {[...Array(6)].map((_, groupIndex) => (
+            <div key={groupIndex} className="flex shrink-0 items-center">
+              {[
+                'Giảng dạy Trung học',
+                'Kinh doanh Quốc tế',
+                'Thuyết trình 100+ người',
+                'MOS Specialist 2019',
+                'Quản trị chiến lược'
+              ].map((text, i) => (
+                <div key={i} className="flex items-center shrink-0">
+                  <span className="text-[#00513f] font-headline font-semibold uppercase tracking-[0.15em] text-[10px] md:text-xs md:text-sm">
+                    {text}
+                  </span>
+                  <span className="mx-4 md:mx-6 text-[10px] md:text-xs opacity-50">
+                    ✦
+                  </span>
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </section>
