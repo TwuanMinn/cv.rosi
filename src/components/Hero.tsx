@@ -26,10 +26,10 @@ export default function Hero() {
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-headline font-extrabold tracking-tighter leading-none text-primary mb-4 md:mb-8 break-words select-none flex flex-col">
             <span className="overflow-hidden block py-1 md:py-2">
-              <span className="block animate-[slideUp_1.2s_cubic-bezier(0.22,1,0.36,1)_forwards] translate-y-full opacity-0" style={{ animationDelay: '0.1s' }}>Thái</span>
+              <span className="block translate-y-full opacity-0 animate-slide-up" style={{ animationDelay: '300ms' }}>Thái</span>
             </span>
             <span className="overflow-hidden block py-1 md:py-2">
-              <span className="block animate-[slideUp_1.2s_cubic-bezier(0.22,1,0.36,1)_forwards] translate-y-full opacity-0" style={{ animationDelay: '0.3s' }}>Duyên.</span>
+              <span className="block translate-y-full opacity-0 animate-slide-up" style={{ animationDelay: '500ms' }}>Duyên.</span>
             </span>
           </h1>
           <p className="text-sm md:text-xl lg:text-2xl text-on-surface-variant font-body leading-relaxed max-w-2xl mb-6 md:mb-12">
