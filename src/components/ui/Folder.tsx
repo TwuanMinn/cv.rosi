@@ -63,7 +63,7 @@ const Folder: React.FC<FolderProps> = ({ color = '#00513f', size = 1, items = []
     });
   };
 
-  const handlePaperMouseLeave = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, index: number) => {
+  const handlePaperMouseLeave = (index: number) => {
     setPaperOffsets(prev => {
       const newOffsets = [...prev];
       newOffsets[index] = { x: 0, y: 0 };
@@ -98,7 +98,7 @@ const Folder: React.FC<FolderProps> = ({ color = '#00513f', size = 1, items = []
           ...folderStyle,
           transform: open ? 'translateY(-8px)' : undefined
         }}
-        onClick={handleClick}
+        onClick={() => handleClick()}
       >
         <div
           className="relative w-[100px] h-[80px] rounded-tl-0 rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]"
@@ -122,7 +122,7 @@ const Folder: React.FC<FolderProps> = ({ color = '#00513f', size = 1, items = []
               <div
                 key={i}
                 onMouseMove={e => handlePaperMouseMove(e, i)}
-                onMouseLeave={e => handlePaperMouseLeave(e, i)}
+                onMouseLeave={() => handlePaperMouseLeave(i)}
                 className={`absolute z-20 bottom-[10%] left-1/2 transition-all duration-300 ease-in-out flex items-center justify-center overflow-hidden shadow-sm ${
                   !open ? 'transform -translate-x-1/2 translate-y-[10%] group-hover:translate-y-0' : 'hover:scale-110 shadow-lg'
                 } ${sizeClasses}`}

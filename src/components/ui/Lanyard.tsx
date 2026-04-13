@@ -8,11 +8,12 @@ import {
   Physics,
   RigidBody,
   useRopeJoint,
-  useSphericalJoint,
-  RigidBodyProps
+  useSphericalJoint
 } from '@react-three/rapier';
+import type { RigidBodyProps } from '@react-three/rapier';
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 import * as THREE from 'three';
+
 
 // References to the public folder (no bundler imports so it doesn't crash if missing)
 const cardGLB = '/card.glb';
@@ -227,7 +228,9 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }: BandProps) {
         </RigidBody>
       </group>
       <mesh ref={band}>
+        {/* @ts-expect-error meshLineGeometry is injected into JSX globally but TypeScript doesn't know */}
         <meshLineGeometry />
+        {/* @ts-expect-error meshLineMaterial is injected into JSX globally but TypeScript doesn't know */}
         <meshLineMaterial
           color="white"
           depthTest={false}
