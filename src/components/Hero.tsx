@@ -1,8 +1,8 @@
 export default function Hero() {
   return (
-    <section className="min-h-[100svh] lg:min-h-[921px] flex items-center px-6 md:px-8 max-w-screen-2xl mx-auto relative overflow-hidden pt-32 lg:pt-0 pb-20 lg:pb-0">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
-        <div className="lg:col-span-7 z-10">
+    <section className="min-h-[100svh] md:min-h-[921px] flex items-center px-6 md:px-8 max-w-screen-2xl mx-auto relative overflow-hidden pt-32 md:pt-0 pb-20 md:pb-0">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center w-full">
+        <div className="md:col-span-7 z-10">
           <span className="text-sm uppercase tracking-widest text-on-surface-variant font-medium font-label mb-4 block">
             Kinh doanh Quốc tế & Giảng dạy
           </span>
@@ -61,7 +61,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="lg:col-span-5 relative">
+        <div className="md:col-span-5 relative">
           <div className="aspect-[4/5] bg-surface-container-high rounded-lg overflow-hidden transition-all duration-700 cubic-bezier-transition shadow-2xl">
             <img
               alt="Thái Duyên"
