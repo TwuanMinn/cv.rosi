@@ -30,11 +30,11 @@ export default function ExperienceTimeline() {
                   2025 — HIỆN TẠI
                 </span>
                 <h3 className="text-2xl font-headline font-bold text-on-surface mt-2">
-                  Giảng dạy Trung học
+                  Gia sư Trung học
                 </h3>
-                <p className="text-primary font-medium">Vstar School, Phạm Hữu Lầu & Bến Vân Đồn</p>
+                <p className="text-primary font-medium">Học sinh Vstar School, Phạm Hữu Lầu & Bến Vân Đồn</p>
                 <p className="mt-4 text-on-surface-variant font-body leading-relaxed">
-                  Đảm nhận công tác giảng dạy tại Vstar School, kết hợp phụ trách hai lớp 9 tại trường THCS Phạm Hữu Lầu và trường THCS Bến Vân Đồn.
+                  Chuyên giảng dạy và bồi dưỡng (gia sư) cho học sinh đến từ Vstar School, cùng học sinh thuộc hai lớp 9 của trường THCS Phạm Hữu Lầu và trường THCS Bến Vân Đồn.
                 </p>
               </div>
 
@@ -47,11 +47,11 @@ export default function ExperienceTimeline() {
                   2024 — 2025
                 </span>
                 <h3 className="text-2xl font-headline font-bold text-on-surface mt-2">
-                  Giảng dạy Tiểu học & THCS
+                  Gia sư Tiểu học & THCS
                 </h3>
-                <p className="text-primary font-medium">Trường công lập & Quốc tế</p>
+                <p className="text-primary font-medium">Học sinh công lập & Quốc tế</p>
                 <p className="mt-4 text-on-surface-variant font-body leading-relaxed">
-                  Phụ trách Khối Lớp 8 & 9 tại Phạm Hữu Lầu, Khối Lớp 8 tại Bến Vân Đồn, và Lớp 4 tại cơ sở Vista School. Quản lý lớp học linh hoạt và hiệu quả.
+                  Đảm nhận dạy kèm (gia sư) cho học sinh Khối Lớp 8 & 9 (Phạm Hữu Lầu), Khối Lớp 8 (Bến Vân Đồn), và Lớp 4 (Vista School). Theo sát tiến độ học tập và quản lý giờ học linh hoạt.
                 </p>
               </div>
               
