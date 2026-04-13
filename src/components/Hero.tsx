@@ -58,6 +58,31 @@ export default function Hero() {
               Tải CV
             </a>
           </div>
+
+          <div className="w-full overflow-hidden mt-6 md:mt-10 pt-4 md:pt-6 border-t border-outline-variant/30 mask-image-fade" data-reveal="fade-in" style={{ transitionDelay: '300ms' }}>
+            <div className="animate-marquee items-center select-none text-outline-variant">
+              {[...Array(2)].map((_, groupIndex) => (
+                <div key={groupIndex} className="flex shrink-0 items-center">
+                  {[
+                    'Giảng dạy Trung học',
+                    'Kinh doanh Quốc tế',
+                    'Thuyết trình 100+ người',
+                    'MOS Specialist 2019',
+                    'Quản trị chiến lược'
+                  ].map((text, i) => (
+                    <div key={i} className="flex items-center shrink-0">
+                      <span className="text-[#00513f] font-headline font-semibold uppercase tracking-[0.15em] text-[10px] md:text-xs">
+                        {text}
+                      </span>
+                      <span className="mx-4 md:mx-6 text-[10px] md:text-xs opacity-50">
+                        ✦
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         <div className="col-span-5 relative mt-8 md:mt-0 self-start md:self-center" data-reveal="right" style={{ transitionDelay: '200ms' }}>
           <div className="aspect-[3/4] md:aspect-[4/5] bg-surface-container-high rounded-xl md:rounded-lg overflow-hidden transition-all duration-700 cubic-bezier-transition shadow-2xl">

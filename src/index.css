@@ -78,3 +78,10 @@
 [data-reveal="left"].on { transform: translateX(0); }
 [data-reveal="right"] { transform: translateX(40px); }
 [data-reveal="right"].on { transform: translateX(0); }
+
+@keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+.animate-marquee { animation: marquee 25s linear infinite; display: inline-flex; width: max-content; }
+.animate-marquee:hover { animation-play-state: paused; }
+
+.mask-image-fade { -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); } 
+
