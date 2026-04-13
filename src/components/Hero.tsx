@@ -31,7 +31,7 @@ export default function Hero() {
             </h1>
           </div>
           <p className="text-sm md:text-xl lg:text-2xl text-on-surface-variant font-body leading-relaxed max-w-2xl mb-6 md:mb-12">
-            Sinh viên chuyên ngành Kinh doanh Quốc tế tại UFM University — song hành cùng hành trình hơn 4 năm tận tâm bồi dưỡng và gia sư cho nhiều thế hệ học sinh. Luôn hướng đến việc kết hợp tư duy logic từ thương trường với sự tận tụy của giáo dục.
+            Sinh viên chuyên ngành Kinh doanh Quốc tế tại UFM University — song hành <span className="text-highlighter">cùng hành trình hơn 4 năm tận tâm bồi dưỡng và gia sư cho nhiều thế hệ học sinh</span>. Luôn hướng đến việc kết hợp tư duy logic từ thương trường với sự tận tụy của giáo dục.
           </p>
           <div className="flex flex-col gap-2 md:gap-4 mb-6 md:mb-10 w-full">
             {[
