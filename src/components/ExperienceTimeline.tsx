@@ -21,7 +21,7 @@ export default function ExperienceTimeline() {
                 glowColor="rgba(0, 81, 63, 0.4)"
               />
               <p className="mt-6 md:mt-8 text-base md:text-lg text-on-surface-variant font-body leading-relaxed">
-                Hành trình giảng dạy thực tế song song cùng kiến thức đại học tại UFM University — không ngừng cập nhật để trở thành một nhà giáo dục ưu tú.
+                Hành trình làm gia sư đúc kết kinh nghiệm thực tế song song với quá trình học tập tại UFM University — không ngừng nỗ lực truyền đạt tri thức và phát triển bản thân.
               </p>
             </div>
           </div>
@@ -72,22 +72,6 @@ export default function ExperienceTimeline() {
                 </p>
               </div>
               
-              {/* Experience Item 3 */}
-              <div className="relative pl-12 md:pl-16" data-reveal="fade-in" style={{ transitionDelay: '300ms' }}>
-                <span className="absolute left-[9px] md:left-[13px] top-1.5 w-[18px] h-[18px] bg-primary rounded-full ring-4 ring-surface-container-low z-10 flex items-center justify-center">
-                  <span className="absolute inset-0 bg-primary rounded-full animate-ping opacity-50" style={{animationDelay: '300ms'}}></span>
-                </span>
-                <span className="text-sm font-label uppercase tracking-widest text-on-surface-variant">
-                  2021 — 2024
-                </span>
-                <h3 className="text-2xl font-headline font-bold text-on-surface mt-2">
-                  Chuyên viên Giảng dạy
-                </h3>
-                <p className="text-primary font-medium">Nhiều đơn vị trường học</p>
-                <p className="mt-4 text-on-surface-variant font-body leading-relaxed">
-                  Xây dựng nền tảng từ Khối Lớp 1 (tiếng Việt tại Korean School) đến Khối Lớp 8. Củng cố kỹ năng truyền đạt kiến thức vững chắc trong nhiều môi trường khác biệt.
-                </p>
-              </div>
 
               {/* Education Item 1 */}
               <div className="relative pl-12 md:pl-16" data-reveal="fade-in" style={{ transitionDelay: '400ms' }}>
