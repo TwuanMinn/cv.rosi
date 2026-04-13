@@ -1,9 +1,13 @@
+import { useScrollRevealAll } from '../hooks/useScrollReveal';
+
 export default function ExperienceTimeline() {
+  const ref = useScrollRevealAll<HTMLElement>(0.1);
+
   return (
-    <section className="py-16 md:py-32 bg-surface-container-low" id="experience">
+    <section ref={ref} className="py-16 md:py-32 bg-surface-container-low" id="experience">
       <div className="max-w-screen-xl mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16">
-          <div className="md:w-1/3">
+          <div className="md:w-1/3" data-reveal="left">
             <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary tracking-tight sticky top-24 lg:top-32">
               Học vấn & <br className="hidden md:block" />
               Kinh nghiệm.
@@ -18,7 +22,7 @@ export default function ExperienceTimeline() {
             
             <div className="space-y-16">
               {/* Experience Item 1 */}
-              <div className="relative pl-12">
+              <div className="relative pl-12" data-reveal="fade-in" style={{ transitionDelay: '100ms' }}>
                 <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
                   <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1s_ease-out_infinite] opacity-75"></div>
                 </div>
@@ -35,7 +39,7 @@ export default function ExperienceTimeline() {
               </div>
 
               {/* Experience Item 2 */}
-              <div className="relative pl-12">
+              <div className="relative pl-12" data-reveal="fade-in" style={{ transitionDelay: '200ms' }}>
                 <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
                   <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1.2s_ease-out_infinite] opacity-75" style={{animationDelay: '100ms'}}></div>
                 </div>
@@ -52,7 +56,7 @@ export default function ExperienceTimeline() {
               </div>
               
               {/* Experience Item 3 */}
-              <div className="relative pl-12">
+              <div className="relative pl-12" data-reveal="fade-in" style={{ transitionDelay: '300ms' }}>
                 <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
                   <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1.2s_ease-out_infinite] opacity-75" style={{animationDelay: '300ms'}}></div>
                 </div>
@@ -69,7 +73,7 @@ export default function ExperienceTimeline() {
               </div>
 
               {/* Education Item 1 */}
-              <div className="relative pl-12">
+              <div className="relative pl-12" data-reveal="fade-in" style={{ transitionDelay: '400ms' }}>
                 <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
                   <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1.2s_ease-out_infinite] opacity-75" style={{animationDelay: '500ms'}}></div>
                 </div>

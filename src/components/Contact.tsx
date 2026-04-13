@@ -1,7 +1,11 @@
+import { useScrollRevealAll } from '../hooks/useScrollReveal';
+
 export default function Contact() {
+  const ref = useScrollRevealAll<HTMLElement>(0.1);
+
   return (
-    <section className="py-16 md:py-32 bg-surface px-6 md:px-8" id="contact">
-      <div className="max-w-screen-xl mx-auto bg-primary-fixed p-8 md:p-12 lg:p-24 rounded-lg relative overflow-hidden">
+    <section ref={ref} className="py-16 md:py-32 bg-surface px-6 md:px-8" id="contact">
+      <div className="max-w-screen-xl mx-auto bg-primary-fixed p-8 md:p-12 lg:p-24 rounded-lg relative overflow-hidden" data-reveal="fade-in">
         <div className="relative z-10 max-w-2xl">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-headline font-extrabold text-on-primary-fixed tracking-tighter leading-none mb-8">
             Sẵn sàng để hợp tác?

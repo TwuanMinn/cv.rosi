@@ -1,8 +1,12 @@
+import { useScrollRevealAll } from '../hooks/useScrollReveal';
+
 export default function Skills() {
+  const ref = useScrollRevealAll<HTMLElement>(0.1);
+
   return (
-    <section className="py-16 md:py-32 bg-surface" id="skills">
+    <section ref={ref} className="py-16 md:py-32 bg-surface" id="skills">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
-        <div className="mb-12 md:mb-20 text-center">
+        <div className="mb-12 md:mb-20 text-center" data-reveal="fade-in">
           <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary tracking-tight">Kỹ năng.</h2>
           <p className="mt-4 text-base md:text-xl text-on-surface-variant font-body">
             Các chứng chỉ, ngoại ngữ và năng lực giải quyết vấn đề.
@@ -12,7 +16,7 @@ export default function Skills() {
         {/* Bento Grid for Skills */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Tech/Languages */}
-          <div className="md:col-span-2 bg-surface-container-lowest p-6 sm:p-8 md:p-10 rounded-lg group hover:shadow-[0_20px_40px_rgba(25,28,27,0.04)] transition-all duration-500 cubic-bezier-transition">
+          <div className="md:col-span-2 bg-surface-container-lowest p-6 sm:p-8 md:p-10 rounded-lg group hover:shadow-[0_20px_40px_rgba(25,28,27,0.04)] transition-all duration-500 cubic-bezier-transition" data-reveal="fade-in" style={{ transitionDelay: '100ms' }}>
             <div className="flex items-center gap-4 mb-8">
               <span className="material-symbols-outlined text-primary text-3xl">translate</span>
               <h3 className="text-2xl font-headline font-bold">Năng lực ngoại ngữ</h3>
@@ -41,7 +45,7 @@ export default function Skills() {
           </div>
 
           {/* Strategy / Certification */}
-          <div className="bg-primary text-on-primary p-6 sm:p-8 md:p-10 rounded-lg flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500 cubic-bezier-transition">
+          <div className="bg-primary text-on-primary p-6 sm:p-8 md:p-10 rounded-lg flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500 cubic-bezier-transition" data-reveal="fade-in" style={{ transitionDelay: '200ms' }}>
             <div>
               <h3 className="text-3xl font-headline font-bold leading-tight mb-4">
                 MOS <br />
@@ -55,7 +59,7 @@ export default function Skills() {
           </div>
 
           {/* Soft Skills */}
-          <div className="bg-surface-container-lowest p-6 sm:p-8 md:p-10 rounded-lg hover:shadow-[0_20px_40px_rgba(25,28,27,0.04)] transition-all duration-500 cubic-bezier-transition">
+          <div className="bg-surface-container-lowest p-6 sm:p-8 md:p-10 rounded-lg hover:shadow-[0_20px_40px_rgba(25,28,27,0.04)] transition-all duration-500 cubic-bezier-transition" data-reveal="fade-in" style={{ transitionDelay: '300ms' }}>
             <div className="flex items-center gap-4 mb-6">
               <span className="material-symbols-outlined text-primary text-3xl">diversity_3</span>
               <h3 className="text-2xl font-headline font-bold">Kỹ năng mềm</h3>
@@ -77,7 +81,7 @@ export default function Skills() {
           </div>
 
           {/* Layout Skill */}
-          <div className="md:col-span-2 bg-[#e0e3df] p-6 sm:p-8 md:p-10 rounded-lg flex items-center justify-between group overflow-hidden relative">
+          <div className="md:col-span-2 bg-[#e0e3df] p-6 sm:p-8 md:p-10 rounded-lg flex items-center justify-between group overflow-hidden relative" data-reveal="fade-in" style={{ transitionDelay: '400ms' }}>
             <div className="z-10">
               <h3 className="text-2xl font-headline font-bold text-on-background mb-4">
                 Tin học & Xử lí dữ liệu

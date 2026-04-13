@@ -1,8 +1,12 @@
+import { useScrollRevealAll } from '../hooks/useScrollReveal';
+
 export default function Hero() {
+  const ref = useScrollRevealAll<HTMLElement>(0.1);
+
   return (
-    <section className="min-h-[100svh] md:min-h-[921px] flex items-center px-4 md:px-8 max-w-screen-2xl mx-auto relative overflow-hidden pt-28 md:pt-0 pb-16 md:pb-0">
+    <section ref={ref} className="min-h-[100svh] md:min-h-[921px] flex items-center px-4 md:px-8 max-w-screen-2xl mx-auto relative overflow-hidden pt-28 md:pt-0 pb-16 md:pb-0">
       <div className="grid grid-cols-12 gap-4 md:gap-12 items-center w-full">
-        <div className="col-span-7 z-10">
+        <div className="col-span-7 z-10" data-reveal="left">
           <span className="text-[10px] md:text-sm uppercase tracking-widest text-on-surface-variant font-medium font-label mb-2 md:mb-4 block">
             Kinh doanh Quốc tế & Giảng dạy
           </span>
@@ -55,7 +59,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="col-span-5 relative mt-8 md:mt-0 self-start md:self-center">
+        <div className="col-span-5 relative mt-8 md:mt-0 self-start md:self-center" data-reveal="right" style={{ transitionDelay: '200ms' }}>
           <div className="aspect-[3/4] md:aspect-[4/5] bg-surface-container-high rounded-xl md:rounded-lg overflow-hidden transition-all duration-700 cubic-bezier-transition shadow-2xl">
             <img
               alt="Thái Duyên"
