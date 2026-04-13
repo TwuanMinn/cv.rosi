@@ -2,11 +2,11 @@ import React, { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo
 import {
   motion,
   AnimatePresence,
-  Transition,
+  type Transition,
   type VariantLabels,
   type Target,
   type TargetAndTransition
-} from 'motion/react';
+} from 'framer-motion';
 import { cn } from '../../lib/utils';
 
 export interface RotatingTextRef {
