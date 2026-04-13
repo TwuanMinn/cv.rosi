@@ -1,5 +1,6 @@
 import { useScrollRevealAll } from '../hooks/useScrollReveal';
 import TrueFocus from './ui/TrueFocus';
+import Folder from './ui/Folder';
 
 export default function ExperienceTimeline() {
   const ref = useScrollRevealAll<HTMLElement>(0.1);
@@ -26,24 +27,53 @@ export default function ExperienceTimeline() {
           </div>
           <div className="md:w-2/3 relative mt-8 md:mt-0">
             {/* Vertical Line */}
-            <div className="absolute left-[11px] top-2 bottom-2 w-[1px] bg-outline-variant opacity-30" />
-            
-            <div className="space-y-16">
-              {/* Experience Item 1 */}
-              <div className="relative pl-12" data-reveal="fade-in" style={{ transitionDelay: '100ms' }}>
-                <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
-                  <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1s_ease-out_infinite] opacity-75"></div>
-                </div>
-                <span className="text-sm font-label uppercase tracking-widest text-on-surface-variant">
-                  2025 — HIỆN TẠI
+            <div className="absolute left-4 md:left-[1.35rem] top-2 bottom-0 w-px bg-outline-variant"></div>
+
+            <div className="space-y-12 md:space-y-16">
+              {/* Item 1 */}
+              <div className="relative pl-12 md:pl-16" data-reveal="up">
+                {/* Timeline Dot */}
+                <span className="absolute left-[11px] md:left-[15px] top-1.5 w-3.5 h-3.5 bg-primary rounded-full ring-4 ring-surface-container-low z-10">
+                  <span className="absolute inset-0 bg-primary rounded-full animate-ping opacity-75"></span>
                 </span>
-                <h3 className="text-2xl font-headline font-bold text-on-surface mt-2">
+                
+                <h3 className="text-xl md:text-2xl font-headline font-bold text-primary mb-1">
                   Gia sư Trung học
                 </h3>
-                <p className="text-primary font-medium">Học sinh Vstar School, Phạm Hữu Lầu & Bến Vân Đồn</p>
-                <p className="mt-4 text-on-surface-variant font-body leading-relaxed">
-                  Chuyên giảng dạy và bồi dưỡng (gia sư) cho học sinh đến từ Vstar School, cùng học sinh thuộc hai lớp 9 của trường THCS Phạm Hữu Lầu và trường THCS Bến Vân Đồn.
-                </p>
+                <span className="inline-block px-3 py-1 bg-surface-container text-xs md:text-sm font-label font-medium text-on-surface-variant rounded-full mb-4">
+                  2025 - Hiện tại
+                </span>
+                <ul className="space-y-2 mb-4 text-sm md:text-base text-on-surface-variant font-body leading-relaxed">
+                  <li className="flex items-start">
+                    <span className="text-secondary mr-2 mt-1">✦</span>
+                    <span>Chuyên giảng dạy và bồi dưỡng (gia sư) cho học sinh đến từ Vstar School, cùng học sinh thuộc hai lớp 9 của trường THCS Phạm Hữu Lầu.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-secondary mr-2 mt-1">✦</span>
+                    <span>Xây dựng lộ trình học tập cá nhân hóa, giúp học sinh nắm vững kiến thức trọng tâm và phát triển tư duy phản biện.</span>
+                  </li>
+                </ul>
+                
+                <div className="mt-12 mb-4 flex items-center gap-10">
+                  <Folder 
+                    color="#00513f" 
+                    size={1.6}
+                    items={[
+                      <div className="px-2 pt-2 text-[10px] leading-tight text-[#002118] font-body text-center h-full flex items-center justify-center border-[0.5px] border-primary/20 rounded-[10px] bg-gradient-to-br from-white to-[#f0fdf5]">
+                        <span className="font-bold text-primary block mb-1">95% học sinh</span><br/>tiến bộ<br/>vượt bậc
+                      </div>,
+                      <div className="px-2 pt-2 text-[10px] leading-tight text-[#002118] font-body text-center h-full flex items-center justify-center border-[0.5px] border-primary/20 rounded-[10px] bg-gradient-to-br from-white to-[#f0fdf5]">
+                        <span className="font-bold text-primary block mb-1">Đỗ trường</span><br/>chuyên<br/>top đầu
+                      </div>,
+                      <div className="px-2 pt-2 text-[10px] leading-tight text-[#002118] font-body text-center h-full flex items-center justify-center border-[0.5px] border-primary/20 rounded-[10px] bg-gradient-to-br from-white to-[#f0fdf5]">
+                        <span className="font-bold text-primary block mb-1">Làm chủ</span><br/>tư duy<br/>logic
+                      </div>
+                    ]}
+                  />
+                  <div className="text-[10px] md:text-xs font-label font-bold text-primary uppercase tracking-widest">
+                    &larr; Click thả hồ sơ <br/><span className="text-on-surface-variant font-normal normal-case">Thành tích học viên</span>
+                  </div>
+                </div>
               </div>
 
               {/* Experience Item 2 */}
