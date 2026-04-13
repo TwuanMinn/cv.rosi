@@ -19,7 +19,9 @@ export default function ExperienceTimeline() {
             <div className="space-y-16">
               {/* Experience Item 1 */}
               <div className="relative pl-10">
-                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-primary ring-4 ring-background" />
+                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
+                  <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1s_ease-out_infinite] opacity-75"></div>
+                </div>
                 <span className="text-sm font-label uppercase tracking-widest text-on-surface-variant">
                   2025 — HIỆN TẠI
                 </span>
@@ -34,7 +36,9 @@ export default function ExperienceTimeline() {
 
               {/* Experience Item 2 */}
               <div className="relative pl-10">
-                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-primary ring-4 ring-background" />
+                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
+                  <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1.2s_ease-out_infinite] opacity-75" style={{animationDelay: '100ms'}}></div>
+                </div>
                 <span className="text-sm font-label uppercase tracking-widest text-on-surface-variant">
                   2024 — 2025
                 </span>
@@ -49,7 +53,9 @@ export default function ExperienceTimeline() {
               
               {/* Experience Item 3 */}
               <div className="relative pl-10">
-                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-primary ring-4 ring-background" />
+                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
+                  <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1.2s_ease-out_infinite] opacity-75" style={{animationDelay: '300ms'}}></div>
+                </div>
                 <span className="text-sm font-label uppercase tracking-widest text-on-surface-variant">
                   2021 — 2024
                 </span>
@@ -64,7 +70,9 @@ export default function ExperienceTimeline() {
 
               {/* Education Item 1 */}
               <div className="relative pl-10">
-                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-primary ring-4 ring-background" />
+                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-primary ring-4 ring-[#f8faf7] z-10">
+                  <div className="absolute top-0 left-0 w-full h-full rounded-full bg-primary animate-[ping_1.2s_ease-out_infinite] opacity-75" style={{animationDelay: '500ms'}}></div>
+                </div>
                 <span className="text-sm font-label uppercase tracking-widest text-on-surface-variant">
                   2021 — 2024
                 </span>
