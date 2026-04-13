@@ -1,5 +1,6 @@
 import { useScrollRevealAll } from '../hooks/useScrollReveal';
 import { motion } from 'framer-motion';
+import RotatingText from './ui/RotatingText';
 
 export default function Skills() {
   const ref = useScrollRevealAll<HTMLElement>(0.1);
@@ -8,10 +9,15 @@ export default function Skills() {
     <section ref={ref} className="py-16 md:py-32 bg-surface" id="skills">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
         <div className="mb-12 md:mb-20 text-center" data-reveal="fade-in">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary tracking-tight">Kỹ năng.</h2>
-          <p className="mt-4 text-base md:text-xl text-on-surface-variant font-body">
-            Các chứng chỉ, ngoại ngữ và năng lực giải quyết vấn đề.
-          </p>
+          <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary tracking-tight mb-4">Kỹ năng.</h2>
+          <RotatingText
+            texts={['Các chứng chỉ, ngoại ngữ và năng lực giải quyết vấn đề.']}
+            mainClassName="text-base md:text-xl text-on-surface-variant font-body justify-center"
+            staggerDuration={0.03}
+            splitBy="characters"
+            rotationInterval={3500}
+            animatePresenceMode="wait"
+          />
         </div>
 
         {/* Bento Grid for Skills */}
