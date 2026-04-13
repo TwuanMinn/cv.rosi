@@ -100,6 +100,16 @@ export default function Hero() {
               src="/profile.png"
             />
           </div>
+          
+          {/* Floating Education Badge overlapping the face pic */}
+          <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 p-4 md:p-5 bg-surface/80 backdrop-blur-xl rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/50 flex items-center justify-center z-20 hover:scale-110 transition-transform cubic-bezier-transition group">
+            <div className="bg-[#e6f4f1] text-[#00513f] w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+              <span className="material-symbols-outlined text-2xl md:text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                school
+              </span>
+            </div>
+          </div>
+
           {/* Decorative element */}
           <div className="absolute -bottom-4 -left-4 md:-bottom-10 md:-left-10 w-24 h-24 md:w-48 md:h-48 bg-primary-fixed -z-10 rounded-full opacity-50 blur-2xl md:blur-3xl" />
         </div>
