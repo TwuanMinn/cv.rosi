@@ -39,7 +39,7 @@ export default function Hero() {
             ))}
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="#experience"
               className="bg-primary text-on-primary px-6 md:px-8 py-4 rounded-lg font-bold tracking-tight flex items-center justify-center gap-2 group transition-all duration-300 cubic-bezier-transition no-underline w-full sm:w-auto text-center"
@@ -47,6 +47,16 @@ export default function Hero() {
               Xem quá trình làm việc
               <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
                 arrow_forward
+              </span>
+            </a>
+            <a
+              href="/cv.pdf"
+              download
+              className="border-2 border-primary text-primary px-6 md:px-8 py-4 rounded-lg font-bold tracking-tight flex items-center justify-center gap-2 group transition-all duration-300 hover:bg-primary hover:text-on-primary cubic-bezier-transition no-underline w-full sm:w-auto text-center"
+            >
+              Tải CV
+              <span className="material-symbols-outlined group-hover:-translate-y-1 transition-transform">
+                download
               </span>
             </a>
           </div>
