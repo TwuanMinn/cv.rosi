@@ -26,9 +26,9 @@ export default function ExperienceTimeline() {
                 <h3 className="text-2xl font-headline font-bold text-on-surface mt-2">
                   Giảng dạy Trung học
                 </h3>
-                <p className="text-primary font-medium">Nam Sài Gòn & Vista School</p>
+                <p className="text-primary font-medium">Vstar School, Phạm Hữu Lầu & Bến Vân Đồn</p>
                 <p className="mt-4 text-on-surface-variant font-body leading-relaxed">
-                  Đảm nhận công tác giảng dạy cho Khối Lớp 7 (Nam Sài Gòn) và Khối Lớp 5 (Vista School). Áp dụng phương pháp sư phạm hiện đại.
+                  Đảm nhận công tác giảng dạy tại Vstar School, kết hợp phụ trách hai lớp 9 tại trường THCS Phạm Hữu Lầu và trường THCS Bến Vân Đồn.
                 </p>
               </div>
 
