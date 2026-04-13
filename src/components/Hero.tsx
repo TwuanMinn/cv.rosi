@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useScrollRevealAll } from '../hooks/useScrollReveal';
 import MagneticButton from './MagneticButton';
 import { Highlight } from './ui/hero-highlight';
+import RotatingText from './ui/RotatingText';
 
 export default function Hero() {
   const ref = useScrollRevealAll<HTMLElement>(0.1);
@@ -22,9 +23,18 @@ export default function Hero() {
     <section ref={ref} className="min-h-[100svh] md:min-h-[921px] flex flex-col justify-center px-4 md:px-8 max-w-[100vw] mx-auto relative overflow-hidden pt-28 md:pt-0 pb-16 md:pb-0">
       <div className="grid grid-cols-12 gap-4 md:gap-12 items-center w-full max-w-screen-2xl mx-auto">
         <div className="col-span-7 z-10">
-          <span className="text-[10px] md:text-sm uppercase tracking-widest text-on-surface-variant font-medium font-label mb-2 md:mb-4 block">
-            Kinh doanh Quốc tế & Giảng dạy
-          </span>
+          <div className="flex items-center flex-wrap gap-1 mb-2 md:mb-4">
+            <span className="text-[10px] md:text-sm uppercase tracking-widest text-on-surface-variant font-medium font-label">
+              Kinh doanh Quốc tế &
+            </span>
+            <RotatingText
+              texts={['Giảng dạy', 'Gia sư', 'Đào tạo', 'Phát triển']}
+              mainClassName="text-[10px] md:text-sm uppercase tracking-widest text-primary font-bold font-label bg-[#9ef3d6] px-2 py-0.5 rounded-sm"
+              staggerDuration={0.03}
+              splitBy="characters"
+              rotationInterval={3000}
+            />
+          </div>
           <div data-reveal="left" style={{ transitionDelay: '100ms' }}>
             <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-headline font-extrabold tracking-tighter leading-none text-primary mb-4 md:mb-8 break-words select-none">
               Thái <br />
