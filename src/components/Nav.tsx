@@ -1,13 +1,21 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+
+type SectionId = 'experience' | 'skills' | 'contact';
 
 export default function Nav() {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const [active, setActive] = useState<SectionId>('experience');
+
+  const NAV_ITEMS = [
+    { id: 'experience', label: 'Kinh nghiệm' },
+    { id: 'skills', label: 'Kỹ năng' },
+    { id: 'contact', label: 'Liên hệ' }
+  ] as { id: SectionId; label: string }[];
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: SectionId) => {
     e.preventDefault();
-    const href = e.currentTarget.getAttribute('href');
-    if (!href || !href.startsWith('#')) return;
-    
-    const targetId = href.replace('#', '');
-    const elem = document.getElementById(targetId);
+    setActive(id);
+    const elem = document.getElementById(id);
     if (elem) {
       const navHeight = 80; // approximate height of header
       const elemPosition = elem.getBoundingClientRect().top + window.scrollY;
@@ -25,38 +33,38 @@ export default function Nav() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="text-xl md:text-2xl font-bold tracking-tighter text-[#00513f] font-headline cursor-pointer"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setActive('experience');
+          }}
         >
           Thái Duyên
         </motion.div>
         <div className="hidden md:flex items-center gap-10">
-          <motion.a
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="text-[#00513f] font-bold border-b-2 border-[#00513f] pb-1 font-headline tracking-tight transition-colors duration-300"
-            href="#experience"
-            onClick={handleScroll}
-          >
-            Kinh nghiệm
-          </motion.a>
-          <motion.a
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="text-[#3e4944] font-medium font-headline tracking-tight hover:text-[#00513f] transition-colors duration-300"
-            href="#skills"
-            onClick={handleScroll}
-          >
-            Kỹ năng
-          </motion.a>
-          <motion.a
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="text-[#3e4944] font-medium font-headline tracking-tight hover:text-[#00513f] transition-colors duration-300"
-            href="#contact"
-            onClick={handleScroll}
-          >
-            Liên hệ
-          </motion.a>
+          {NAV_ITEMS.map(({ id, label }) => {
+            const isActive = active === id;
+            return (
+              <motion.a
+                key={id}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                className={`relative pb-1 font-headline tracking-tight transition-colors duration-300 ${
+                  isActive ? 'text-[#00513f] font-bold' : 'text-[#3e4944] font-medium hover:text-[#00513f]'
+                }`}
+                href={`#${id}`}
+                onClick={(e) => handleScroll(e, id)}
+              >
+                {label}
+                {isActive && (
+                  <motion.div
+                    layoutId="nav-underline"
+                    className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00513f]"
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  />
+                )}
+              </motion.a>
+            );
+          })}
         </div>
         <motion.a
           whileHover={{ scale: 1.05 }}
