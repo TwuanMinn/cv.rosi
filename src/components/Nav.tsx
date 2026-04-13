@@ -1,8 +1,8 @@
 export default function Nav() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#f8faf7]/80 backdrop-blur-md">
-      <div className="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
-        <div className="text-2xl font-bold tracking-tighter text-[#00513f] font-headline">
+      <div className="flex justify-between items-center px-6 md:px-8 py-4 md:py-6 max-w-screen-2xl mx-auto">
+        <div className="text-xl md:text-2xl font-bold tracking-tighter text-[#00513f] font-headline">
           Thái Duyên
         </div>
         <div className="hidden md:flex items-center gap-10">
@@ -27,7 +27,7 @@ export default function Nav() {
         </div>
         <a
           href="mailto:thaiduyen809@gmail.com"
-          className="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold tracking-tight active:scale-95 opacity-100 transition-all duration-300 cubic-bezier-transition no-underline"
+          className="bg-primary text-on-primary px-4 md:px-6 py-2 md:py-2.5 rounded-lg text-sm md:text-base font-bold tracking-tight active:scale-95 opacity-100 transition-all duration-300 cubic-bezier-transition no-underline whitespace-nowrap"
         >
           Liên hệ ngay
         </a>

@@ -1,18 +1,18 @@
 export default function ExperienceTimeline() {
   return (
-    <section className="py-32 bg-surface-container-low" id="experience">
-      <div className="max-w-screen-xl mx-auto px-8">
-        <div className="flex flex-col md:flex-row gap-16">
+    <section className="py-16 md:py-32 bg-surface-container-low" id="experience">
+      <div className="max-w-screen-xl mx-auto px-6 md:px-8">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-16">
           <div className="md:w-1/3">
-            <h2 className="text-4xl font-headline font-bold text-primary tracking-tight sticky top-32">
-              Học vấn & <br />
+            <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary tracking-tight sticky top-24 lg:top-32">
+              Học vấn & <br className="hidden md:block" />
               Kinh nghiệm.
             </h2>
-            <p className="mt-6 text-on-surface-variant font-body leading-relaxed">
+            <p className="mt-4 md:mt-6 text-base md:text-lg text-on-surface-variant font-body leading-relaxed">
               Hơn 4 năm hành trình giảng dạy thực tế cùng kiến thức chuyên ngành tại môi trường giáo dục đại học.
             </p>
           </div>
-          <div className="md:w-2/3 relative">
+          <div className="md:w-2/3 relative mt-8 md:mt-0">
             {/* Vertical Line */}
             <div className="absolute left-[7px] top-2 bottom-2 w-[1px] bg-outline-variant opacity-30" />
             
