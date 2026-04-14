@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-tertiary: #ffffff;
+  --color-primary-container: #006b54;
+  --color-on-surface-variant: #3e4944;
+  --color-primary-fixed-dim: #82d7ba;
+  --color-surface-tint: #016b54;
+  --color-on-tertiary-container: #ffcdc5;
+  --color-on-surface: #191c1b;
+  --color-on-background: #191c1b;
+  --color-surface-dim: #d9dad8;
+  --color-primary-fixed: #9ef3d6;
+  --color-outline-variant: #bec9c3;
+  --color-error: #ba1a1a;
+  --color-surface-bright: #f8faf7;
+  --color-secondary-fixed-dim: #c4c7c3;
+  --color-on-primary-fixed-variant: #00513f;
+  --color-surface-container: #edeeec;
+  --color-on-primary-fixed: #002118;
+  --color-on-error-container: #93000a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-outline: #6f7a74;
+  --color-on-tertiary-fixed: #3c0804;
+  --color-on-secondary-fixed: #191c1a;
+  --color-surface-container-lowest: #ffffff;
+  --color-tertiary-fixed-dim: #ffb4a8;
+  --color-secondary: #5b5f5c;
+  --color-inverse-surface: #2e3130;
+  --color-background: #f8faf7;
+  --color-inverse-primary: #82d7ba;
+  --color-surface-container-low: #f2f4f2;
+  --color-surface: #f8faf7;
+  --color-inverse-on-surface: #f0f1ef;
+  --color-on-secondary-fixed-variant: #444844;
+  --color-tertiary-container: #92493e;
+  --color-secondary-container: #dde0dc;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #606460;
+  --color-secondary-fixed: #e0e3df;
+  --color-on-primary: #ffffff;
+  --color-surface-container-highest: #e1e3e1;
+  --color-on-primary-container: #94e8cb;
+  --color-surface-container-high: #e7e9e6;
+  --color-primary: #00513f;
+  --color-tertiary: #753229;
+  --color-surface-variant: #e1e3e1;
+  --color-tertiary-fixed: #ffdad4;
+  --color-on-tertiary-fixed-variant: #753229;
+
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: #f8faf7;
+    color: #191c1b;
+  }
+}
+
+@layer utilities {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .cubic-bezier-transition {
+    transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  }
+}
+
+[data-reveal] { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
+[data-reveal].on { opacity: 1; transform: translateY(0); }
+[data-reveal="fade-in"] { transform: translateY(0) scale(0.95); }
+[data-reveal="fade-in"].on { transform: translateY(0) scale(1); }
+[data-reveal="left"] { transform: translateX(-40px); }
+[data-reveal="left"].on { transform: translateX(0); }
+[data-reveal="right"] { transform: translateX(40px); }
+[data-reveal="right"].on { transform: translateX(0); }
+
+@keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+.animate-marquee { animation: marquee 25s linear infinite; display: inline-flex; width: max-content; }
+.animate-marquee:hover { animation-play-state: paused; }
+
+.mask-image-fade { -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); } 
+
+
+@keyframes slideUp { 0% { transform: translateY(100%); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+.grain-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 9999; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); opacity: 0.05; mix-blend-mode: multiply; }
+
+.animate-slide-up { animation: slideUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+@keyframes draw-highlight { 0% { background-size: 0% 100%; } 100% { background-size: 100% 100%; } } .text-highlighter { background-image: linear-gradient(transparent 60%, rgba(158, 243, 214, 0.8) 60%); background-repeat: no-repeat; background-size: 0% 100%; animation: draw-highlight 1s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.8s; color: #002118; font-weight: 600; padding: 0 4px; border-radius: 2px; } 
