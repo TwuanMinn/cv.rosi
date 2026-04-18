@@ -228,9 +228,9 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }: BandProps) {
         </RigidBody>
       </group>
       <mesh ref={band}>
-        {/* @ts-expect-error meshLineGeometry is injected into JSX globally but TypeScript doesn't know */}
+        {/* @ts-ignore */}
         <meshLineGeometry />
-        {/* @ts-expect-error meshLineMaterial is injected into JSX globally but TypeScript doesn't know */}
+        {/* @ts-ignore */}
         <meshLineMaterial
           color="white"
           depthTest={false}

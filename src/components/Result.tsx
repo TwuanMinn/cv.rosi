@@ -1,5 +1,6 @@
 import { useScrollRevealAll } from '../hooks/useScrollReveal';
 import { motion } from 'framer-motion';
+import StudentOutcomes from './StudentOutcomes';
 
 export default function Result() {
   const ref = useScrollRevealAll<HTMLElement>(0.1);
@@ -44,6 +45,10 @@ export default function Result() {
           <p className="text-white/90 font-body md:text-xl max-w-2xl mx-auto leading-relaxed">
             Sự tin tưởng và kết quả học tập của các em học sinh, cùng sự an tâm của quý phụ huynh là minh chứng thành công vững chắc nhất.
           </p>
+        </div>
+
+        <div className="mb-16 md:mb-24">
+          <StudentOutcomes />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
