@@ -8,7 +8,18 @@ export default function Skills() {
   return (
     <section ref={ref} className="py-16 md:py-32 bg-surface" id="skills">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
-        <div className="mb-12 md:mb-20 text-center" data-reveal="fade-in">
+        <div className="mb-12 md:mb-20 flex flex-col items-center text-center" data-reveal="fade-in">
+          <motion.div
+            className="mb-8"
+            animate={{ y: [0, -15, 0] }}
+            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+          >
+            <img 
+              src="/skills-icon.png" 
+              alt="Multi-tasking Skills" 
+              className="w-[240px] md:w-[320px] object-contain drop-shadow-2xl opacity-90 transition-all duration-500 hover:opacity-100 hover:scale-[1.02]"
+            />
+          </motion.div>
           <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary tracking-tight mb-4">Kỹ năng.</h2>
           <RotatingText
             texts={['Các chứng chỉ, ngoại ngữ và năng lực giải quyết vấn đề.']}

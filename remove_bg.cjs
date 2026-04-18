@@ -1,42 +1,40 @@
 const Jimp = require('jimp');
+const path = require('path');
 
-async function processImage() {
-    try {
-        const image = await Jimp.read('C:\\Users\\Admin\\.gemini\\antigravity\\brain\\56cfaa27-b968-4445-988a-925f91a16540\\glassmorphic_browser_icon_1776162115275.png');
-        
-        const bgInt = image.getPixelColor(10, 10);
-        const bgRGBA = Jimp.intToRGBA(bgInt);
-        console.log("Background color:", bgRGBA);
+const [, , input, output, thresholdArg] = process.argv;
 
-        const targetR = bgRGBA.r;
-        const targetG = bgRGBA.g;
-        const targetB = bgRGBA.b;
-        
-        const threshold = 65; 
-
-        image.scan(0, 0, image.bitmap.width, image.bitmap.height, (x, y, idx) => {
-            const r = image.bitmap.data[idx + 0];
-            const g = image.bitmap.data[idx + 1];
-            const b = image.bitmap.data[idx + 2];
-            const a = image.bitmap.data[idx + 3];
-
-            const dist = Math.sqrt(
-                Math.pow(r - targetR, 2) + Math.pow(g - targetG, 2) + Math.pow(b - targetB, 2)
-            );
-
-            if (dist < threshold) {
-                image.bitmap.data[idx + 3] = 0;
-            } else if (dist < threshold + 40) {
-                const alphaFactor = (dist - threshold) / 40;
-                image.bitmap.data[idx + 3] = a * alphaFactor;
-            }
-        });
-
-        await image.writeAsync('public/glassmorphic-icon.png');
-        console.log("Done");
-    } catch (e) {
-        console.error(e);
-    }
+if (!input || !output) {
+  console.error('Usage: node remove_bg.cjs <input> <output> [threshold=65]');
+  process.exit(1);
 }
 
-processImage();
+const threshold = Number(thresholdArg) || 65;
+
+async function processImage() {
+  const image = await Jimp.read(input);
+  const bg = Jimp.intToRGBA(image.getPixelColor(10, 10));
+  console.log('Background sample:', bg);
+
+  image.scan(0, 0, image.bitmap.width, image.bitmap.height, (_x, _y, idx) => {
+    const r = image.bitmap.data[idx];
+    const g = image.bitmap.data[idx + 1];
+    const b = image.bitmap.data[idx + 2];
+    const a = image.bitmap.data[idx + 3];
+
+    const dist = Math.sqrt((r - bg.r) ** 2 + (g - bg.g) ** 2 + (b - bg.b) ** 2);
+
+    if (dist < threshold) {
+      image.bitmap.data[idx + 3] = 0;
+    } else if (dist < threshold + 40) {
+      image.bitmap.data[idx + 3] = a * ((dist - threshold) / 40);
+    }
+  });
+
+  await image.writeAsync(path.resolve(output));
+  console.log('Wrote', output);
+}
+
+processImage().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});
